@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1566169587</DateInstalled>
+  <DateInstalled>1566169910</DateInstalled>
   <DonateText>Donations</DonateText>
   <DonateLink>https://www.linuxserver.io/donate</DonateLink>
   <Description>Nextcloud is an open source, self-hosted file sync and communication app platform. Access and sync your files, contacts, calendars and communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Description>
@@ -39,7 +39,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/NASdata</ContainerDir>
+      <ContainerDir>/externaldata</ContainerDir>
       <Mode>ro,shared</Mode>
     </Volume>
     <Volume>
@@ -61,10 +61,10 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host Port 1" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Host Path 2" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="NAS data" Target="/NASdata" Default="" Mode="ro,shared" Description="Container Path: /externdata" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="NextCloud Port" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="NextCloud Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="External Data" Target="/externaldata" Default="" Mode="ro,shared" Description="Container Path: /externdata" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/nextcloud" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
 </Container>
