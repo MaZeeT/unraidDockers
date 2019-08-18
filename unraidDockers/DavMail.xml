@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>davmail</Name>
+  <Name>DavMail</Name>
   <Repository>kayvan/davmail</Repository>
   <Registry>https://hub.docker.com/r/kayvan/davmail/</Registry>
   <Network>bridge</Network>
@@ -53,7 +53,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/rsync/davmail/</HostDir>
       <ContainerDir>/etc/davmail</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
