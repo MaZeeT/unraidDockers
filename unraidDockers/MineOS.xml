@@ -45,12 +45,12 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>mc</Value>
+      <Value></Value>
       <Name>USER_NAME</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>mc</Value>
+      <Value></Value>
       <Name>USER_PASSWORD</Name>
       <Mode/>
     </Variable>
