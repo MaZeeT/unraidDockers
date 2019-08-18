@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>davmail</Name>
+  <Repository>kayvan/davmail</Repository>
+  <Registry>https://hub.docker.com/r/kayvan/davmail/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/mguessan/davmail/master/src/icon/davmail.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1566162146</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1025</HostPort>
+        <ContainerPort>1025</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1110</HostPort>
+        <ContainerPort>1110</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1389</HostPort>
+        <ContainerPort>1389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1143</HostPort>
+        <ContainerPort>1143</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1080</HostPort>
+        <ContainerPort>1080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/rsync/davmail/</HostDir>
+      <ContainerDir>/etc/davmail</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="volume" Target="/etc/davmail" Default="" Mode="rw" Description="config volume" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/rsync/davmail/</Config>
+  <Config Name="smtp" Target="1025" Default="" Mode="tcp" Description="smtp port" Type="Port" Display="always" Required="false" Mask="false">1025</Config>
+  <Config Name="pop3" Target="1110" Default="" Mode="tcp" Description="pop3 port" Type="Port" Display="always" Required="false" Mask="false">1110</Config>
+  <Config Name="ldap" Target="1389" Default="" Mode="tcp" Description="ldap port" Type="Port" Display="always" Required="false" Mask="false">1389</Config>
+  <Config Name="imap" Target="1143" Default="" Mode="tcp" Description="imap port" Type="Port" Display="always" Required="false" Mask="false">1143</Config>
+  <Config Name="caldav" Target="1080" Default="" Mode="tcp" Description="caldav port" Type="Port" Display="always" Required="false" Mask="false">1080</Config>
+</Container>
