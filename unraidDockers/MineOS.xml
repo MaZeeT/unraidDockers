@@ -58,7 +58,7 @@
   <Labels/>
   <Config Name="MineOS" Target="/var/games/minecraft/" Default="" Mode="rw" Description="Volume to store files and worlds from different servers" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/</Config>
   <Config Name="Username" Target="USER_NAME" Default="minecraft" Mode="" Description="Container Variable: USER_NAME" Type="Variable" Display="always" Required="true" Mask="false">mc</Config>
-  <Config Name="Password" Target="USER_PASSWORD" Default="mc" Mode="" Description="Container Variable: USER_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">mc</Config>
+  <Config Name="Password" Target="USER_PASSWORD" Default="mc" Mode="" Description="Container Variable: USER_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">mac</Config>
   <Config Name="WebUI" Target="8443" Default="8443" Mode="tcp" Description="Port for the web ui" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
   <Config Name="Server port" Target="25565-25570" Default="25565-25570" Mode="tcp" Description="Container Port: 25565-25570" Type="Port" Display="always" Required="false" Mask="false">25565-25570</Config>
 </Container>
