@@ -53,7 +53,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/rsync/davmail/</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/etc/davmail</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
