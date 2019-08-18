@@ -25,27 +25,27 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>1025</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>1025</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>1110</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>1110</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>1389</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>1389</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>1143</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>1143</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>1080</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>1080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -53,17 +53,17 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/rsync/davmail/</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/etc/davmail</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="volume" Target="/etc/davmail" Default="" Mode="rw" Description="config volume" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/rsync/davmail/</Config>
-  <Config Name="smtp" Target="1025" Default="" Mode="tcp" Description="smtp port" Type="Port" Display="always" Required="false" Mask="false">1025</Config>
-  <Config Name="pop3" Target="1110" Default="" Mode="tcp" Description="pop3 port" Type="Port" Display="always" Required="false" Mask="false">1110</Config>
-  <Config Name="ldap" Target="1389" Default="" Mode="tcp" Description="ldap port" Type="Port" Display="always" Required="false" Mask="false">1389</Config>
-  <Config Name="imap" Target="1143" Default="" Mode="tcp" Description="imap port" Type="Port" Display="always" Required="false" Mask="false">1143</Config>
-  <Config Name="caldav" Target="1080" Default="" Mode="tcp" Description="caldav port" Type="Port" Display="always" Required="false" Mask="false">1080</Config>
+  <Config Name="volume" Target="/etc/davmail" Default="" Mode="rw" Description="config volume" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="smtp" Target="1025" Default="1025" Mode="tcp" Description="smtp port" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="pop3" Target="1110" Default="1110" Mode="tcp" Description="pop3 port" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ldap" Target="1389" Default="" Mode="tcp" Description="ldap port" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="imap" Target="1143" Default="" Mode="tcp" Description="imap port" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="caldav" Target="1080" Default="" Mode="tcp" Description="caldav port" Type="Port" Display="always" Required="false" Mask="false"></Config>
 </Container>
