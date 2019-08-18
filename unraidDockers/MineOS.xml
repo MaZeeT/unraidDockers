@@ -25,12 +25,12 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8443</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>8443</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>25565-25570</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>25565-25570</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -38,7 +38,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/var/games/minecraft/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
