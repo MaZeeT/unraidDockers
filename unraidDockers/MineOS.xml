@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MineOS</Name>
+  <Repository>hexparrot/mineos</Repository>
+  <Registry>https://hub.docker.com/r/hexparrot/mineos/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>The official MineOS webui docker build. </Overview>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
+  <TemplateURL/>
+  <Icon>https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/android-icon-192x192.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1566167776</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The official MineOS webui docker build. </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565-25570</HostPort>
+        <ContainerPort>25565-25570</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/</HostDir>
+      <ContainerDir>/var/games/minecraft/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>mc</Value>
+      <Name>USER_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mc</Value>
+      <Name>USER_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="MineOS" Target="/var/games/minecraft/" Default="" Mode="rw" Description="Volume to store files and worlds from different servers" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/</Config>
+  <Config Name="Username" Target="USER_NAME" Default="minecraft" Mode="" Description="Container Variable: USER_NAME" Type="Variable" Display="always" Required="true" Mask="false">mc</Config>
+  <Config Name="Password" Target="USER_PASSWORD" Default="mc" Mode="" Description="Container Variable: USER_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">mc</Config>
+  <Config Name="WebUI" Target="8443" Default="8443" Mode="tcp" Description="Port for the web ui" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="Server port" Target="25565-25570" Default="25565-25570" Mode="tcp" Description="Container Port: 25565-25570" Type="Port" Display="always" Required="false" Mask="false">25565-25570</Config>
+</Container>
