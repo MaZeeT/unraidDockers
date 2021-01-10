@@ -55,6 +55,16 @@ Remember to mount /torrent in the config file.</Description>
   <Environment>
     <Variable>
       <Value></Value>
+      <Name>USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
       <Name>PUID</Name>
       <Mode/>
     </Variable>
@@ -65,6 +75,8 @@ Remember to mount /torrent in the config file.</Description>
     </Variable>
   </Environment>
   <Labels/>
+  <Config Name="Username" Target="USER" Default="transmission" Mode="" Description="Specify an optional username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Password" Target="PASS" Default="" Mode="" Description="Specify an optional password" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Host Port 2" Target="51413" Default="51413" Mode="tcp" Description="Container Port: 51413" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Host Path 2" Target="/torrents" Default="" Mode="rw" Description="Container Path: /torrents" Type="Path" Display="always" Required="true" Mask="false"></Config>
